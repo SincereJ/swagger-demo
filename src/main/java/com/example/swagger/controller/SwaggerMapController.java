@@ -1,5 +1,6 @@
 package com.example.swagger.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.example.swagger.swagger.BaseController;
 import com.example.swagger.swagger.annos.ApiJsonObject;
 import com.example.swagger.swagger.annos.ApiJsonProperty;
@@ -21,19 +22,27 @@ public class SwaggerMapController extends BaseController {
     @ApiJsonObject(name = "params", value = {
             @ApiJsonProperty(type = Integer.class,key = "mobile", example = "18614242538", description = "user mobile"),
             @ApiJsonProperty(type = Integer.class,key = "password", example = "123456", description = "user password"),
-            @ApiJsonProperty(type = String.class,key = "name", example = "", description = "user 姓名"),
+            @ApiJsonProperty(type = String.class,key = "NAME_SS", example = "", description = "user 姓名"),
             @ApiJsonProperty(type = Integer.class,key = "page", example = "", description = "当前页"),
             @ApiJsonProperty(type = Integer.class,key = "rows", example = "15", description = "行数")
     })
     @ApiOperation(value = "视频回放", notes = "courseLessonId 课时编号 不能为空")
     public String selectIndentNumberByPrimaryIdAndName(@RequestBody Map<String,Object> params){
         log.info("ssssssssssssss---index");
-        return "ssssssssss";
+
+
+        return JSON.toJSONString(params);
+    }
+    @PostMapping("/otherApiInterface")
+    @ApiJsonObject(name = "otherApiInterface", value = {
+            @ApiJsonProperty(type = String.class,key = "NAME_SS", example = "", description = "user 姓名")
+    })
+    @ApiOperation(value = "otherApiInterface", notes = "otherApiInterface")
+    public String otherApiInterface(@RequestBody Map<String,Object> params){
+        log.info("ssssssssssssss---otherApiInterface");
+
+
+        return JSON.toJSONString(params);
     }
 
-    /*@GetMapping("/dd")
-    //@ApiOperation(value = "视频回放", notes = "courseLessonId 课时编号 不能为空")
-    public String dd (@RequestBody  Map<String, Object> params){
-        return "doc";
-    }*/
 }

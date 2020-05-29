@@ -1,6 +1,7 @@
 package com.example.swagger.swagger.config;
 
 import com.example.swagger.swagger.annos.ApiJsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import jdk.internal.org.objectweb.asm.*;
 import org.apache.commons.lang3.StringUtils;
 
@@ -43,7 +44,8 @@ public class SwaggerASMUtil implements Opcodes {
     }
 
     private static void createFieldGetterMethod(ClassWriter cw,ApiJsonProperty property,String className,String typeof, String typeoffer, int[] loadAndReturnOf){
-        String getterName = getterAndSetterName(property.key(),true);
+        //String getterName = getterAndSetterName(property.key(),true);
+        String getterName = property.key();
         MethodVisitor m_getName=cw.visitMethod(ACC_PUBLIC, getterName, typeoffer, null, null);
         m_getName.visitVarInsn(ALOAD, 0);
         m_getName.visitFieldInsn(GETFIELD, className, property.key(), typeof);
@@ -53,7 +55,8 @@ public class SwaggerASMUtil implements Opcodes {
     }
 
     private static void createFieldSetterMethod(ClassWriter cw,ApiJsonProperty property,String className,String typeof, String typeoffer, int[] loadAndReturnOf){
-        String setterName = getterAndSetterName(property.key(),false);
+        //String setterName = getterAndSetterName(property.key(),false);
+        String setterName = property.key();
         MethodVisitor m_setName=cw.visitMethod(ACC_PUBLIC, setterName, typeoffer, null, null);
         m_setName.visitVarInsn(ALOAD, 0);
         m_setName.visitVarInsn(loadAndReturnOf[0], 1);
@@ -63,13 +66,15 @@ public class SwaggerASMUtil implements Opcodes {
         m_setName.visitEnd();
     }
 
+    @ApiModelProperty()
     private static void createFieldAndAnno(ClassWriter cw, ApiJsonProperty property,String typeof){
         FieldVisitor fv = cw.visitField(ACC_PUBLIC, property.key(), typeof, null, new String(property.example().toString()));
         fv.visitEnd();
 
         AnnotationVisitor av = fv.visitAnnotation("Lio/swagger/annotations/ApiModelProperty;", true);
         //注释参数
-        av.visit("value", property.key());
+        av.visit("name", property.key());
+        av.visit("value", property.description());
         av.visit("example", property.example());
         av.visitEnd();
     }
@@ -89,6 +94,23 @@ public class SwaggerASMUtil implements Opcodes {
             cw.visitEnd();
 
             byte[] code = cw.toByteArray();
+
+            /*File file = new File("D:\\sincere\\swagger-demo\\"+className+".class");
+            if(file.exists()){
+                file.delete();
+            }else{
+                file.createNewFile();
+            }
+
+            BufferedOutputStream bf = null;
+            try{
+                 bf = new BufferedOutputStream(new FileOutputStream(file));
+                bf.write(code);
+            }finally {
+                if(bf != null){
+                    bf.close();
+                }
+            }*/
 
             return code;
         } catch (Exception e) {
