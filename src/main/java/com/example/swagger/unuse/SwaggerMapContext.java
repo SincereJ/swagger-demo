@@ -1,12 +1,12 @@
-package com.example.swagger.swagger.config;
-
-import org.springframework.stereotype.Component;
+package com.example.swagger.unuse;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Component
+//@Component
 public class SwaggerMapContext {
+
+    public static boolean resolved = false;
 
     public static final String filterPackage = "com.example";
 

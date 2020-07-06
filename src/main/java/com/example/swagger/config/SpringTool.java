@@ -1,4 +1,4 @@
-package com.example.swagger.swagger;
+package com.example.swagger.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +16,15 @@ public class SpringTool implements ApplicationContextAware {
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         if(SpringTool.applicationContext == null){
             SpringTool.applicationContext = applicationContext;
+            /*DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
+            String[] beanDefinitionNames = defaultListableBeanFactory.getBeanDefinitionNames();
+            for (String bname : beanDefinitionNames) {
+                System.out.println(bname);
+            }
+            if(defaultListableBeanFactory.containsBeanDefinition("basicErrorController")){
+                System.out.println("删除error beanDefinition 省的swagger 每次都解析");
+                ((BeanDefinitionRegistry) defaultListableBeanFactory).removeBeanDefinition("basicErrorController");
+            }*/
         }
     }
 

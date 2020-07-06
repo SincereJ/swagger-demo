@@ -1,57 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c11fc758-6f49-4553-b3da-6855b128b4d0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="c11fc758-6f49-4553-b3da-6855b128b4d0" name="Default" comment="1 参数大小写支持&#10;2 description 描述 的支持">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/config/ApiJsonClassLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/ApiJsonDocumentationConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/ApiJsonObjectModelsProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/ApiJsonPluginManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/contexts/ApiJsonDocumentationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/contexts/ApiJsonDocumentationContextBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/contexts/ApiJsonRefContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/contexts/ApiJsonRefContextBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/documentation/ApiJsonDocumentation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/documentation/ApiJsonDocumentationBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonNameAndTypeReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonObjectPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonPropertiesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonPropertyPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonRefModelCreateReplacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonRefModelHeaderReplacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonRefModelReplacePlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/ApiJsonRefModelTailReplacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/plugins/PluginOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/scanners/ApiJsonDocumentationScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/scanners/ApiJsonObjectScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/scanners/ApiJsonPropertyScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/scanners/ApiJsonRefModelReplacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/schema/ApiJsonPropertySingle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/unuse/MapApiReader_bak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/vo/ThirdRequestReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/SwaggerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/SwaggerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/controller/SwaggerMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/controller/SwaggerMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/unuse/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SimpleJbean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/unuse/SimpleJbean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SimpleJbeanAsm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/unuse/SimpleJbeanAsm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SpringTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/config/SpringTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/WebMvcConfg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/config/WebMvcConfg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/beans/FieldInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MapApiReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MapApiReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MyBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/unuse/MyBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/SwaggerASMUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/utils/SwaggerASMUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/SwaggerMapContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/swagger/unuse/SwaggerMapContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo.iml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list id="d8102fc6-c910-4c71-a519-616d2f0e7f05" name="ingroe" comment="ingroe">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/SwaggerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/controller/SwaggerMapController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/SimpleJbeanAsm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/SpringTool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/WebMvcConfg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/beans/FieldInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/config/MapApiReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/config/MyBeanPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/swagger/swagger/config/SwaggerASMUtil.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SwaggerApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/SwaggerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapApiReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MapApiReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyBeanPostProcessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MyBeanPostProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="214" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -59,185 +83,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/swagger-demo.iml">
+      <ranges>
+        <range start1="61" end1="61" start2="61" end2="63" changelist="d8102fc6-c910-4c71-a519-616d2f0e7f05" />
+        <range start1="103" end1="103" start2="105" end2="106" changelist="c11fc758-6f49-4553-b3da-6855b128b4d0" />
+      </ranges>
+    </file>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/annos/ApiJsonObject.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/SwaggerMapController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/config/MapApiReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/SwaggerApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/config/SwaggerASMUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/copy/MapApiReader_copy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/controller/HelloController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/controller/SwaggerMapController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/WebMvcConfg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/MapApiReader_copy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SwaggerMapAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MyBeanPostProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/swagger/SwaggerApplication.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.6.0-bin/apache-maven-3.6.0" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1" />
-    <option name="y" value="67" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+  <component name="ProjectId" id="1b6q874EGjfaJdl53lErXdPR2UT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swagger-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swagger-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../zdedu" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2525355" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.swagger.config" />
+      <recent name="com.example.swagger.swagger.utils" />
+      <recent name="com.example.swagger.unuse" />
       <recent name="com.excmple.swagger.controller" />
       <recent name="com.excmple.swagger.swagger.copy" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.swagger.swagger.config" />
+      <recent name="com.example.swagger.swagger.plugins" />
+      <recent name="com.example.swagger.swagger.contexts" />
+      <recent name="com.example.swagger.swagger.documentation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\sincere\idea-workspace\swagger-demo\src\main\java\com\example\swagger\swagger\config" />
@@ -248,18 +162,14 @@
     </key>
   </component>
   <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+    <option name="configurationTypes">
+      <set>
+        <option value="Remote" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Remote.swg">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -268,98 +178,109 @@
       <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
+    <configuration name="swg" type="Remote">
+      <module name="swagger-demo" />
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="SHMEM_ADDRESS" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
     </configuration>
     <configuration name="SwaggerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <module name="swagger-demo" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.swagger.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.swagger.SwaggerApplication" />
-      <module name="swagger-demo" />
-      <envs />
+      <option name="ENABLE_LAUNCH_OPTIMIZATION" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="D:\Program Files\Java\jdk1.8.0_191\jre" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
+    <list>
+      <item itemvalue="Remote.swg" />
+      <item itemvalue="Spring Boot.SwaggerApplication" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.SwaggerApplication" />
+      <list>
+        <item itemvalue="Spring Boot.SwaggerApplication" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.19777341" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Remote" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Remote" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_INTERFACES" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -367,11 +288,36 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c11fc758-6f49-4553-b3da-6855b128b4d0" name="Default" comment="" />
+      <changelist id="d8102fc6-c910-4c71-a519-616d2f0e7f05" name="ingroe" comment="" />
       <created>1574050812957</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574050812957</updated>
       <workItem from="1574050816612" duration="4525000" />
+      <workItem from="1587962730915" duration="1943000" />
+      <workItem from="1588760756394" duration="1869000" />
+      <workItem from="1590634188943" duration="830000" />
+      <workItem from="1590636185717" duration="4297000" />
+      <workItem from="1590722288026" duration="526000" />
+      <workItem from="1590723330323" duration="1228000" />
+      <workItem from="1590732066458" duration="3553000" />
+      <workItem from="1590739030212" duration="677000" />
+      <workItem from="1590743994118" duration="61000" />
+      <workItem from="1590744407384" duration="95000" />
+      <workItem from="1590744547210" duration="370000" />
+      <workItem from="1590746015339" duration="2619000" />
+      <workItem from="1592293356975" duration="2138000" />
+      <workItem from="1592377851931" duration="498000" />
+      <workItem from="1592906440498" duration="77000" />
+      <workItem from="1592906551708" duration="9307000" />
+      <workItem from="1592969819097" duration="716000" />
+      <workItem from="1592983072054" duration="731000" />
+      <workItem from="1592989027946" duration="22640000" />
+      <workItem from="1593488997066" duration="8522000" />
+      <workItem from="1593505004754" duration="12509000" />
+      <workItem from="1593589808228" duration="6668000" />
+      <workItem from="1593673732881" duration="15320000" />
+      <workItem from="1593744953430" duration="59331000" />
     </task>
     <task id="LOCAL-00001" summary="ss">
       <created>1574056695722</created>
@@ -387,398 +333,183 @@
       <option name="project" value="LOCAL" />
       <updated>1574056785869</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1 参数大小写支持&#10;2 description 描述 的支持">
+      <created>1590749894492</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590749894492</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4525000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
-    <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34324324" sideWeight="0.48586118" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Redis Servers" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20372751" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.281491" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.281491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39864865" sideWeight="0.5263496" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.4974293" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27702704" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5972973" sideWeight="0.5533419" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43243244" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.4974293" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27956298" sideWeight="0.47232473" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26606685" sideWeight="0.5276753" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44594595" sideWeight="0.5096401" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21529563" sideWeight="0.5144404" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3104113" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
-      <window_info id="Run Dashboard" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6972973" sideWeight="0.5141388" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="ss" />
-    <option name="LAST_COMMIT_MESSAGE" value="ss" />
+    <MESSAGE value="1 参数大小写支持&#10;2 description 描述 的支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 参数大小写支持&#10;2 description 描述 的支持" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="5" />
-    </breakpoint-manager>
-    <watches-manager />
+  <component name="WindowStateProjectService">
+    <state x="323" y="0" width="967" height="860" key="#SwaggerApplication" timestamp="1594018363468">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="323" y="0" width="967" height="860" key="#SwaggerApplication/0.0.1600.860@0.0.1600.860" timestamp="1594018363468" />
+    <state x="254" y="84" width="1174" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593759702421">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="254" y="84" width="1174" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1593759702421" />
+    <state x="586" y="134" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1593681004468">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="586" y="134" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.860@0.0.1600.860" timestamp="1593681004467" />
+    <state x="605" y="138" key="#com.intellij.ide.util.MemberChooser" timestamp="1594024507967">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="605" y="138" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1594024507967" />
+    <state x="532" y="209" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594027523628">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="532" y="209" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1594027523628" />
+    <state x="577" y="287" width="488" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594027524692">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="577" y="287" width="488" height="295" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.860@0.0.1600.860" timestamp="1594027524692" />
+    <state x="530" y="175" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1594025578429">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="175" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1600.860@0.0.1600.860" timestamp="1594025578429" />
+    <state x="766" y="123" key="#xdebugger.evaluate" timestamp="1593771477453">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="766" y="123" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1593771477453" />
+    <state x="543" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593768642883">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="543" y="274" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860@0.0.1600.860" timestamp="1593768642883" />
+    <state x="394" y="21" width="1024" height="818" key="CommitChangelistDialog2" timestamp="1594027827898">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="394" y="21" width="1024" height="818" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1594027827898" />
+    <state width="915" height="668" key="DebuggerActiveHint" timestamp="1594019619798">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="915" height="668" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1594019619798" />
+    <state x="152" y="67" key="DiffContextDialog" timestamp="1592377971779">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="152" y="67" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1592377971779" />
+    <state x="586" y="184" key="FileChooserDialogImpl" timestamp="1593681312345">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="586" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1593681312345" />
+    <state x="609" y="325" key="Github.CreateGistDialog" timestamp="1593676665859">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="609" y="325" key="Github.CreateGistDialog/0.0.1600.860@0.0.1600.860" timestamp="1593676665859" />
+    <state width="1224" height="266" key="GridCell.Tab.0.bottom" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.0.center" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.0.left" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.0.right" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.1.bottom" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.1.center" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.1.left" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.1.right" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.2.bottom" timestamp="1594027625447">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.2.bottom/0.0.1600.860@0.0.1600.860" timestamp="1594027625447" />
+    <state width="1224" height="266" key="GridCell.Tab.2.center" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.2.center/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.2.left" timestamp="1594027625446">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.2.left/0.0.1600.860@0.0.1600.860" timestamp="1594027625446" />
+    <state width="1224" height="266" key="GridCell.Tab.2.right" timestamp="1594027625447">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1224" height="266" key="GridCell.Tab.2.right/0.0.1600.860@0.0.1600.860" timestamp="1594027625447" />
+    <state x="699" y="151" key="RollbackChangesDialog" timestamp="1594027802921">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="699" y="151" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1594027802921" />
+    <state x="301" y="7" key="SettingsEditor" timestamp="1593745552065">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="7" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1593745552065" />
+    <state x="646" y="344" key="VCS.ChangelistChooser" timestamp="1590749832607">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="646" y="344" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1590749832607" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1592378152618">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1592378152618" />
+    <state x="303" y="165" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1593844519682">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="303" y="165" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860@0.0.1600.860" timestamp="1593844519682" />
+    <state x="476" y="161" width="1035" height="538" key="find.popup" timestamp="1593999715724">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="476" y="161" width="1035" height="538" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1593999715724" />
+    <state x="492" y="220" key="git4idea.merge.GitPullDialog" timestamp="1592378073527">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="492" y="220" key="git4idea.merge.GitPullDialog/0.0.1600.860@0.0.1600.860" timestamp="1592378073527" />
+    <state x="456" y="190" key="run.anything.popup" timestamp="1593489986110">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="190" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1593489986110" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1594007513758">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1594007513758" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/ApiJsonObject_copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/ApiJsonProperty_copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/SwaggerASMUtil_copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/SwaggerMapContext_copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/beans/FieldInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/annos/ApiJsonObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/annos/ApiJsonProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/excmple/swagger/controller/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/excmple/swagger/swagger/SwaggerMapAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/SwaggerMapAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/WebMvcConfg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/copy/MapApiReader_copy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="72" column="63" lean-forward="false" selection-start-line="72" selection-start-column="63" selection-end-line="72" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/controller/SwaggerMapController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/CommonConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1058">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/MyClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SimpleJbean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SimpleJbeanAsm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1219">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SpringTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-core/2.9.2/springfox-core-2.9.2-sources.jar!/springfox/documentation/service/Parameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.4.0/classmate-1.4.0-sources.jar!/com/fasterxml/classmate/TypeResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/SwaggerASMUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/SwaggerMapContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/SwaggerMapAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MapApiReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/swagger/config/MyBeanPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/swagger/SwaggerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>swagger-demo</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2525355" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: asm:asm:3.3.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/swagger_demo$SwaggerApplication.ic" NAME="SwaggerApplication Coverage Results" MODIFIED="1593742747674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.swagger.*</FILTER>
+    </SUITE>
   </component>
 </project>

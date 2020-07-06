@@ -1,14 +1,22 @@
-package com.example.swagger.swagger.config;
+package com.example.swagger.swagger.utils;
 
 import com.example.swagger.swagger.annos.ApiJsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import com.example.swagger.swagger.schema.ApiJsonPropertySingle;
 import jdk.internal.org.objectweb.asm.*;
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.List;
 
 public class SwaggerASMUtil implements Opcodes {
 
     private static void createClazz(ClassWriter cw,String className){
         cw.visit(V1_8, ACC_PUBLIC, className, null, "java/lang/Object", null);
+
+        // 添加 ApiModel 注解cw
+        AnnotationVisitor av = cw.visitAnnotation("Lio/swagger/annotations/ApiModel;", true);
+        //注释参数
+        av.visit("value", className);
+        av.visitEnd();
     }
 
     private static void createConstructor(ClassWriter cw){
@@ -20,6 +28,27 @@ public class SwaggerASMUtil implements Opcodes {
         methodVisitor.visitInsn(Opcodes.RETURN);
         methodVisitor.visitMaxs(0, 0);
         methodVisitor.visitEnd();
+    }
+
+    private static void doParseFieldAndMethod(ClassWriter cw, List<ApiJsonPropertySingle> properties, String className){
+        for (ApiJsonPropertySingle property : properties) {
+
+            String typeof = "";
+            if(property.getType() != null){
+                typeof = Type.getType(property.getType()).getDescriptor();
+            }
+            int[] loadAndReturnOf = loadAndReturnOf(typeof);
+
+            // 创建 字段 和 注释
+            createFieldAndAnno(cw,property,typeof);
+
+            // 创建字段getter 方法
+            createFieldGetterMethod(cw,property,className,typeof,getOrSetOffer(typeof,true),loadAndReturnOf);
+
+            // 创建字段setter 方法
+            createFieldSetterMethod(cw,property,className,typeof,getOrSetOffer(typeof,false),loadAndReturnOf);
+
+        }
     }
 
     private static void doParseFieldAndMethod(ClassWriter cw, ApiJsonProperty[] propertys, String className){
@@ -43,6 +72,17 @@ public class SwaggerASMUtil implements Opcodes {
         }
     }
 
+    private static void createFieldGetterMethod(ClassWriter cw,ApiJsonPropertySingle property,String className,String typeof, String typeoffer, int[] loadAndReturnOf){
+        //String getterName = getterAndSetterName(property.key(),true);
+        String getterName = property.getKey();
+        MethodVisitor m_getName=cw.visitMethod(ACC_PUBLIC, getterName, typeoffer, null, null);
+        m_getName.visitVarInsn(ALOAD, 0);
+        m_getName.visitFieldInsn(GETFIELD, className, property.getKey(), typeof);
+        m_getName.visitInsn(loadAndReturnOf[1]);
+        m_getName.visitMaxs(2, 1);
+        m_getName.visitEnd();
+    }
+
     private static void createFieldGetterMethod(ClassWriter cw,ApiJsonProperty property,String className,String typeof, String typeoffer, int[] loadAndReturnOf){
         //String getterName = getterAndSetterName(property.key(),true);
         String getterName = property.key();
@@ -52,6 +92,18 @@ public class SwaggerASMUtil implements Opcodes {
         m_getName.visitInsn(loadAndReturnOf[1]);
         m_getName.visitMaxs(2, 1);
         m_getName.visitEnd();
+    }
+
+    private static void createFieldSetterMethod(ClassWriter cw,ApiJsonPropertySingle property,String className,String typeof, String typeoffer, int[] loadAndReturnOf){
+        //String setterName = getterAndSetterName(property.key(),false);
+        String setterName = property.getKey();
+        MethodVisitor m_setName=cw.visitMethod(ACC_PUBLIC, setterName, typeoffer, null, null);
+        m_setName.visitVarInsn(ALOAD, 0);
+        m_setName.visitVarInsn(loadAndReturnOf[0], 1);
+        m_setName.visitFieldInsn(PUTFIELD, className, property.getKey(), typeof);
+        m_setName.visitInsn(RETURN);
+        m_setName.visitMaxs(3,3);
+        m_setName.visitEnd();
     }
 
     private static void createFieldSetterMethod(ClassWriter cw,ApiJsonProperty property,String className,String typeof, String typeoffer, int[] loadAndReturnOf){
@@ -66,10 +118,21 @@ public class SwaggerASMUtil implements Opcodes {
         m_setName.visitEnd();
     }
 
-    @ApiModelProperty()
+    private static void createFieldAndAnno(ClassWriter cw, ApiJsonPropertySingle property,String typeof){
+        FieldVisitor fv = cw.visitField(ACC_PUBLIC, property.getKey(), typeof, null, new String(property.getExample().toString()));
+
+        AnnotationVisitor av = fv.visitAnnotation("Lio/swagger/annotations/ApiModelProperty;", true);
+        //注释参数
+        av.visit("name", property.getKey());
+        av.visit("value", property.getDescription());
+        av.visit("example", property.getExample());
+        av.visitEnd();
+
+        fv.visitEnd();
+    }
+
     private static void createFieldAndAnno(ClassWriter cw, ApiJsonProperty property,String typeof){
         FieldVisitor fv = cw.visitField(ACC_PUBLIC, property.key(), typeof, null, new String(property.example().toString()));
-        fv.visitEnd();
 
         AnnotationVisitor av = fv.visitAnnotation("Lio/swagger/annotations/ApiModelProperty;", true);
         //注释参数
@@ -77,6 +140,29 @@ public class SwaggerASMUtil implements Opcodes {
         av.visit("value", property.description());
         av.visit("example", property.example());
         av.visitEnd();
+
+        fv.visitEnd();
+    }
+
+    public static byte[] createRefModel(List<ApiJsonPropertySingle> properties, String className) {
+        try {
+            ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+            //创建类
+            createClazz(cw,className);
+
+            //创建构造方法
+            createConstructor(cw);
+
+            //循环处理 getter 和 setter 方法 创建字段和注解
+            doParseFieldAndMethod(cw,properties,className);
+
+            cw.visitEnd();
+
+            return cw.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public static byte[] createRefModel(ApiJsonProperty[] propertys, String className) {
@@ -94,24 +180,6 @@ public class SwaggerASMUtil implements Opcodes {
             cw.visitEnd();
 
             byte[] code = cw.toByteArray();
-
-            /*File file = new File("D:\\sincere\\swagger-demo\\"+className+".class");
-            if(file.exists()){
-                file.delete();
-            }else{
-                file.createNewFile();
-            }
-
-            BufferedOutputStream bf = null;
-            try{
-                 bf = new BufferedOutputStream(new FileOutputStream(file));
-                bf.write(code);
-            }finally {
-                if(bf != null){
-                    bf.close();
-                }
-            }*/
-
             return code;
         } catch (Exception e) {
             e.printStackTrace();

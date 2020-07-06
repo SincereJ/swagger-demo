@@ -1,9 +1,9 @@
 package com.example.swagger.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.example.swagger.swagger.BaseController;
 import com.example.swagger.swagger.annos.ApiJsonObject;
 import com.example.swagger.swagger.annos.ApiJsonProperty;
+import com.example.swagger.vo.ThirdRequestReq;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,7 @@ import java.util.Map;
 @RequestMapping("/swagger")
 @RestController
 @Slf4j
-public class SwaggerMapController extends BaseController {
+public class SwaggerMapController {//extends BaseController {
 
     @PostMapping("/selectIndentNumberByPrimaryIdAndName")
     @ApiJsonObject(name = "params", value = {
@@ -29,10 +29,10 @@ public class SwaggerMapController extends BaseController {
     @ApiOperation(value = "视频回放", notes = "courseLessonId 课时编号 不能为空")
     public String selectIndentNumberByPrimaryIdAndName(@RequestBody Map<String,Object> params){
         log.info("ssssssssssssss---index");
-
-
         return JSON.toJSONString(params);
     }
+
+
     @PostMapping("/otherApiInterface")
     @ApiJsonObject(name = "otherApiInterface", value = {
             @ApiJsonProperty(type = String.class,key = "NAME_SS", example = "", description = "user 姓名")
@@ -40,9 +40,14 @@ public class SwaggerMapController extends BaseController {
     @ApiOperation(value = "otherApiInterface", notes = "otherApiInterface")
     public String otherApiInterface(@RequestBody Map<String,Object> params){
         log.info("ssssssssssssss---otherApiInterface");
-
-
         return JSON.toJSONString(params);
+    }
+
+    @PostMapping("/thirdApiInterface")
+    @ApiOperation(value = "thirdApiInterface", notes = "thirdApiInterface")
+    public String thirdApiInterface(@RequestBody ThirdRequestReq req){
+        log.info(JSON.toJSONString(req));
+        return JSON.toJSONString(req);
     }
 
 }

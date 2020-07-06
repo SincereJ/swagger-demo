@@ -1,4 +1,4 @@
-package com.example.swagger.swagger;
+package com.example.swagger.unuse;
 
 
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * </ul>
  *
  */
-@Controller
+//@Controller
 public abstract class BaseController {
 
 	@GetMapping("/zzzzzzzzzzz")

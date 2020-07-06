@@ -1,4 +1,4 @@
-package com.example.swagger.swagger.config;
+package com.example.swagger.unuse;
 
 
 import com.example.swagger.swagger.annos.ApiJsonObject;
@@ -6,7 +6,6 @@ import com.example.swagger.swagger.annos.ApiJsonProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Slf4j
-@Component
+//@Component
 public class MyBeanPostProcessor implements BeanPostProcessor {
 
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {

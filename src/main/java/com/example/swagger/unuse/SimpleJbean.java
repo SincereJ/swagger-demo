@@ -1,4 +1,4 @@
-package com.example.swagger.swagger;
+package com.example.swagger.unuse;
 
 public abstract class SimpleJbean {
     //public abstract byte[] createBeanClass(String className, List<FieldInfo> fields);
