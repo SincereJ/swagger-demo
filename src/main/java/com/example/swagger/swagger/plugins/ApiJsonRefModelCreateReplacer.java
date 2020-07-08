@@ -1,6 +1,6 @@
 package com.example.swagger.swagger.plugins;
 
-import com.example.swagger.config.ApiJsonClassLoader;
+import com.example.swagger.swagger.config.ApiJsonClassLoader;
 import com.example.swagger.swagger.contexts.ApiJsonRefContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

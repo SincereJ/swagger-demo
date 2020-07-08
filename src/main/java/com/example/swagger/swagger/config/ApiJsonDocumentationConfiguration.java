@@ -1,6 +1,5 @@
 package com.example.swagger.swagger.config;
 
-import com.example.swagger.config.ApiJsonClassLoader;
 import com.example.swagger.swagger.plugins.ApiJsonObjectPlugin;
 import com.example.swagger.swagger.plugins.ApiJsonPropertyPlugin;
 import com.example.swagger.swagger.plugins.ApiJsonRefModelReplacePlugin;

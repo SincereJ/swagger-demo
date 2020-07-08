@@ -1,4 +1,4 @@
-package com.example.swagger.config;
+package com.example.swagger.swagger.config;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.loader.LaunchedURLClassLoader;
@@ -10,7 +10,7 @@ import static com.example.swagger.swagger.config.ApiJsonDocumentationConfigurati
 
 public class ApiJsonClassLoader extends ClassLoader {
 
-    private LaunchedURLClassLoader loader = null;
+    private LaunchedURLClassLoader loader;
 
     public ApiJsonClassLoader(){
         loader = getURLClassLoader("file://" + TEMP_CLASS);
@@ -23,7 +23,7 @@ public class ApiJsonClassLoader extends ClassLoader {
     private LaunchedURLClassLoader getURLClassLoader(String fileNames){
         if(loader == null){
             if(StringUtils.isNotBlank(fileNames)){
-                URL urls[] = new URL[1];
+                URL[] urls = new URL[1];
                 try {
                     urls[0] = new URL(fileNames);
                 } catch (MalformedURLException e) {
