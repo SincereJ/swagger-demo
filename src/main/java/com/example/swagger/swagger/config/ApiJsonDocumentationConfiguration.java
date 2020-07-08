@@ -22,6 +22,8 @@ import org.springframework.plugin.core.config.EnablePluginRegistries;
 })
 public class ApiJsonDocumentationConfiguration {
 
+    public static final String TEMP_CLASS = "D:/temp/";
+
     @Bean
     public ApiJsonClassLoader apiJsonClassLoader(){
         return new ApiJsonClassLoader();

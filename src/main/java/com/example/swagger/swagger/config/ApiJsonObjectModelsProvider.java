@@ -16,12 +16,11 @@ import org.springframework.stereotype.Component;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.OperationModelsProviderPlugin;
 import springfox.documentation.spi.service.contexts.RequestMappingContext;
-import springfox.documentation.swagger.common.SwaggerPluginSupport;
 
 import static springfox.documentation.swagger.common.SwaggerPluginSupport.pluginDoesApply;
 
 @Component
-@Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER)
+@Order
 public class ApiJsonObjectModelsProvider implements OperationModelsProviderPlugin {
 
     //private static final Logger LOG = LoggerFactory.getLogger(ApiJsonObjectModelsProvider.class);

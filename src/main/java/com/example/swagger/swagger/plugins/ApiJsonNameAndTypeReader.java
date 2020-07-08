@@ -1,7 +1,7 @@
 package com.example.swagger.swagger.plugins;
 
-import com.example.swagger.swagger.utils.SwaggerASMUtil;
 import com.example.swagger.swagger.contexts.ApiJsonDocumentationContext;
+import com.example.swagger.swagger.utils.SwaggerASMUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import springfox.documentation.spi.DocumentationType;

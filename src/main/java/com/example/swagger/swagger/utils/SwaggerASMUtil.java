@@ -122,6 +122,7 @@ public class SwaggerASMUtil implements Opcodes {
         FieldVisitor fv = cw.visitField(ACC_PUBLIC, property.getKey(), typeof, null, new String(property.getExample().toString()));
 
         AnnotationVisitor av = fv.visitAnnotation("Lio/swagger/annotations/ApiModelProperty;", true);
+        //AnnotationVisitor av = fv.visitAnnotation("Lcom/example/swagger/swagger/annos/ApiJsonAttribute;", true);
         //注释参数
         av.visit("name", property.getKey());
         av.visit("value", property.getDescription());
@@ -222,7 +223,7 @@ public class SwaggerASMUtil implements Opcodes {
 
     public static String returnClassName(String requestMappingPatternName, String name){
         requestMappingPatternName = ("Class"+requestMappingPatternName).replaceAll("/","_");
-        return requestMappingPatternName+"_"+name;
+        return requestMappingPatternName + "_" + name;
     }
 
 }
