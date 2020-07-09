@@ -1,43 +1,35 @@
 package com.example.swagger.swagger.config;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.loader.LaunchedURLClassLoader;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import static com.example.swagger.swagger.config.ApiJsonDocumentationConfiguration.TEMP_CLASS;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 public class ApiJsonClassLoader extends ClassLoader {
 
-    private LaunchedURLClassLoader loader;
+    private final static String DEFINE_CLASS = "defineClass0";
+    private Method method = null;
 
     public ApiJsonClassLoader(){
-        loader = getURLClassLoader("file://" + TEMP_CLASS);
+        try {
+            Class<?> proxy = Proxy.class;
+            method = proxy.getDeclaredMethod(DEFINE_CLASS, ClassLoader.class,String.class,byte[].class,int.class,int.class);
+            method.setAccessible(true);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
     }
 
     public Class<?> defineClassInstance(String name, byte[] b, int off, int len) {
-        return defineClass(name, b, off, len);
-    }
-
-    private LaunchedURLClassLoader getURLClassLoader(String fileNames){
-        if(loader == null){
-            if(StringUtils.isNotBlank(fileNames)){
-                URL[] urls = new URL[1];
-                try {
-                    urls[0] = new URL(fileNames);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                    throw new RuntimeException("加载lib目录下jar文件出错！",e);
-                }
-                loader = new LaunchedURLClassLoader(urls,Thread.currentThread().getContextClassLoader());
-                Thread.currentThread().setContextClassLoader(loader);
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        if(loader instanceof LaunchedURLClassLoader){
+            try {
+                return (Class<?>) method.invoke(null, loader, name, b, off, len);
+            } catch (IllegalAccessException | InvocationTargetException e) {
+                e.printStackTrace();
             }
         }
-        return loader;
-    }
-
-    public LaunchedURLClassLoader getLoader() {
-        return loader;
+        return defineClass(name, b, off, len);
     }
 }

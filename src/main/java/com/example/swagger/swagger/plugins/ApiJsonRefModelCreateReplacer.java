@@ -30,12 +30,9 @@ public class ApiJsonRefModelCreateReplacer implements ApiJsonRefModelReplacePlug
     @Override
     public void apply(ApiJsonRefContext context) {
         String name = context.getDocumentation().getName();
-        Class<?> clazz = null;
-        try {
-            clazz = apiJsonClassLoader.getLoader().loadClass(name);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        if(clazz != null) context.setClazz(clazz);
+        byte[] code = context.getCode();
+        Class<?> clazz = apiJsonClassLoader.defineClassInstance(name,code,0,code.length);
+        LOG.info("apiJsonRefModelCreateReplacer "+clazz.getName());
+        context.setClazz(clazz);
     }
 }
